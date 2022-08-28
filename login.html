@@ -61,7 +61,7 @@
             height: 35px;
             width: 250px;
             background:rgba(255, 255, 255, 0.3);
-            border: 1px solid cyan);
+            border: 1px solid cyan;
             border-radius: 5px;
             transition: 0.2s;
             outline: none;
@@ -119,13 +119,13 @@
 <div class="box">
 
     <h1>L O G I N</h1>
-    <form action="postLogin.php" method="post" onsubmit="return check()">
+    <div action="postLogin.php" method="post" onsubmit="return check()">
     <div class="input-box">
-        <label for="">账号</label>
+        <label >账号</label>
         <input type="text" name="name">
     </div>
     <div class="input-box">
-        <label for="">密码</label>
+        <label >密码</label>
         <input type="password" name="pw">
     </div>
     <div class="btn-box">
@@ -135,8 +135,9 @@
             <button><a href="singup.html">注册</a></button>
         </div>
     </div>
-
+    </div>
 </div>
+
 
 <script>
     function check(){
