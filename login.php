@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* 页面的透明图 0-1 */
+            opacity: 0.9999999999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* 页面的背景图片，可以修改 */
+            background:url(img/one.jpg) ;
+            background-size: cover;
+
+        }
+        .box{
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 380px;
+            width: 350px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .box h1{
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+        .box .input-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+        .box .input-box label{
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 13px;
+        }
+        .box .input-box input{
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            height: 35px;
+            width: 250px;
+            background:rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            transition: 0.2s;
+            outline: none;
+            padding: 0 10px;
+            letter-spacing: 1px;
+        }
+        .box .input-box input:focus{
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .box .btn-box {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        .box .btn-box a{
+            font-size: 13px;
+            width: 250px;
+            text-align: end;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            transition: 0.2s;
+        }
+        .box .btn-box a:hover{
+            color: rgba(255, 255, 255, 1);
+
+        }
+        .box .btn-box div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            margin-top: 20px;
+        }
+        .box .btn-box div button{
+            width: 115px;
+            height: 35px;
+            border: 1px solid rgba(197, 81, 58, 0.8);
+            background: rgba(197, 81, 58, 0.5);
+            color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        .box .btn-box div button:nth-of-type(2){     /*p:nth-of-type(2)表示选择第二个p标签*/
+            margin-left: 10px;
+        }
+        .box .btn-box div button:hover{
+            border: 1px solid rgba(248, 108, 76, 0.8);
+            background: rgba(248, 108, 76, 0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+    <h1>L O G I N</h1>
+    <form action="postLogin.php" method="post" onsubmit="return check()">
+    <div class="input-box">
+        <label for="">账号</label>
+        <input type="text" name="name">
+    </div>
+    <div class="input-box">
+        <label for="">密码</label>
+        <input type="password" name="pw">
+    </div>
+    <div class="btn-box">
+        <a href="index.html">返回首页</a>
+        <div>
+            <button type="submit">登录</button>
+            <button><a href="singup.php">注册</a></button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function check(){
+        let name = document.getElementsByName('name')[0].value.trim();
+        //这个函数返回的是一个数组，后面加【0】是指取第一个.后面的trim是指去掉空格
+        let pw = document.getElementsByName('pw')[0].value.trim();
+
+
+        //  规定了字符要求
+        let nameReg=/^[a-zA-Z0-9]{3,10}$/;
+        if (!nameReg.test(name)){
+            alert('用户名只能为3到10长度的字母和数字');
+            return false;        //返回错误，在上面的return就会终止跳转页面
+        }
+        //判断密码
+        let pwReg=/^[a-zA-Z0-9@*_]{6,10}$/;
+        if (!pwReg.test(pw)){
+            alert('密码只能为6到10长度的字母和数字和特殊字符@*_');
+            return false;        //返回错误，在上面的return就会终止跳转页面
+        }
+        return true;     //如果以上都未触发证明合格，进入提交表单
+    }
+</script>
+
+
+</body>
+</html>
