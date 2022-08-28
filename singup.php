@@ -83,7 +83,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- 将页面滚动到目标位置 -->
                 <li><a href="index.html" class="page-scroll">首页</a></li>
-                <li><a href="login.php" >登录</a></li>
+                <li><a href="login.html" >登录</a></li>
             </ul>
         </div>
     </div>
