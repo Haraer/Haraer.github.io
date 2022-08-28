@@ -119,25 +119,24 @@
 <div class="box">
 
     <h1>L O G I N</h1>
-    <div action="postLogin.php" method="post" onsubmit="return check()">
-    <div class="input-box">
-        <label >账号</label>
-        <input type="text" name="name">
-    </div>
-    <div class="input-box">
-        <label >密码</label>
-        <input type="password" name="pw">
-    </div>
-    <div class="btn-box">
-        <a href="index.html">返回首页</a>
-        <div>
-            <button type="submit">登录</button>
-            <button><a href="singup.html">注册</a></button>
+    <form action="postLogin.php" method="post" onsubmit="return check()">
+        <div class="input-box">
+            <label for="">账号</label>
+            <input type="text" name="name">
         </div>
-    </div>
-    </div>
-</div>
+        <div class="input-box">
+            <label for="">密码</label>
+            <input type="password" name="pw">
+        </div>
+        <div class="btn-box">
+            <a href="index.html">返回首页</a>
+            <div>
+                <button type="submit">登录</button>
+                <button><a href="singup.php">注册</a></button>
+            </div>
+        </div>
 
+</div>
 
 <script>
     function check(){
