@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客列表页</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/blog_list.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="nav">
+  <img src="img/1.png" alt="">
+  <span class="title">我的博客系统</span>
+  <!-- 使用 span 把左右两侧的元素给撑开 -->
+  <span class="spacer"></span>
+  <a href="index.html">主页</a>
+  <a href="blog_edit.html">写博客</a>
+  <a href="logout.php">注销</a>
+</div>
+<!-- 版心 -->
+<div class="container">
+  <!-- 左侧区域，显示用户信息 -->
+  <div class="container-left">
+    <!-- 用户详情 -->
+    <div class="card">
+      <!-- 用户的头像 -->
+      <img src="img/1.png" alt="">
+      <!-- 用户名 -->
+      <h3></h3>
+      <!-- 文章分类 -->
+      <div class="counter">
+        <span>文章</span>
+        <span>分类</span>
+      </div>
+      <div class="counter">
+        <span>2</span>
+        <span>1</span>
+      </div>
+    </div>
+  </div>
+  <!-- 右侧区域，显示博客列表 -->
+  <div class="container-right">
+    <!-- 每个 blog 代表一篇博客 -->
+    <div class="blog">
+      <div class="title">第一篇博客</div>
+      <div class="date">2022-8-29</div>
+      <div class="desc">
+        大部分程序员在自学的道路上不知道走了多少坑，这个视频那个网站搞得自己晕头转向。对我个人来说我平常在学习的过程中喜欢看一些教程式的博客。这些博客的特点：
+
+        1、总结知识点相对比较全面
+
+        2、一般来说讲解知识点通俗易懂
+
+        3、路线比较清晰，不会有太多的冗余内容。
+
+        这样一来，对于自学的朋友来说，一些专业的博客不但大量的缩减了你得学习时间、提高了学习效率。更重要的是这些博客能培养你对编程的兴趣。
+      </div>
+      <a href="blog1.html" class="detail">查看全文&gt;&gt;</a>
+    </div>
+    <div class="blog">
+      <div class="title">第二篇博客</div>
+      <div class="date">2022-2-16</div>
+      <div class="desc">
+        学习一门新的编程语言，首先应该了解这门语言的特点。C++是一门经典的面向对象的编程语言。面向对象的语言与以往各种语言最根本的区别在于，它设计的出发点就是为了能更直接地描述客观世界中存在的事物（即对象）。
+      </div>
+      <a href="blog2.html" class="detail">查看全文&gt;&gt;</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+>
